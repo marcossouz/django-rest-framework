@@ -1,0 +1,3 @@
+Instrucoes para deploy no heroku
+
+https://github.com/Gpzim98/django-heroku
