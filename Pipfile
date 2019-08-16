@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+django-crispy-forms = "*"
+django = "*"
+django-multiselectfield = "*"
 
 [requires]
 python_version = "3.6"
