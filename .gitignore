@@ -1,3 +1,5 @@
 .vscode
 *.sqlite3
 *.pyc
+Pipefile
+Pipefile.lock
