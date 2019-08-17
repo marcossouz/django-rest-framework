@@ -18,7 +18,9 @@ class PontoTuristicoViewSet(ModelViewSet):
     # permission_classes = (DjangoModelPermissions,) # permissoes pelo django admin
     # authentication_classes = (TokenAuthentication,)
     search_fields = ('nome', 'descricao', 'endereco__linha1')
-    lookup_field = 'nome' # precisa ser unique no banco
+    lookup_field = 'id' # precisa ser unique no banco
+
+    
 
     def get_queryset(self):
         id = self.request.query_params.get('id', None)
@@ -36,6 +38,7 @@ class PontoTuristicoViewSet(ModelViewSet):
             queryset = queryset.filter(descricao__iexact=descricao)
 
         # return PontoTuristico.objects.filter(aprovado=True)
+        print(queryset)
         return queryset
     
     def list(self, request, *args, **kwargs):
@@ -69,3 +72,14 @@ class PontoTuristicoViewSet(ModelViewSet):
     @action(methods=['get'], detail=False)
     def teste(self, request):
         return Response({'Action Sem Id': 'OK'})
+
+    @action(methods=['post'], detail=True)
+    def associa_atracoes(self, request, id):
+        atracoes = request.data['ids']
+
+        ponto = PontoTuristico.objects.get(id=id)
+
+        ponto.atracoes.set(atracoes)
+
+        ponto.save()
+        return Response({"OK":"OK"})

@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['pontos-turisticos-ms.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['pontos-turisticos-ms.herokuapp.com']
 
 
 # Application definition
@@ -128,7 +128,17 @@ MEDIA_ROOT = 'imagens'
 MEDIA_URL  = '/media/'
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':5
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
