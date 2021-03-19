@@ -2,7 +2,7 @@ dj-database-url==0.5.0
 dj-static==0.0.6
 Django==2.2.4
 django-filter==2.2.0
-djangorestframework==3.10.2
+djangorestframework==3.11.2
 Pillow==6.1.0
 python-decouple==3.1
 pytz==2019.2
