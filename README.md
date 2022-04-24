@@ -35,7 +35,7 @@ Desenvolvaimento de um projeto de Web API de pontos turísticos com Python + Dja
   - [x] 5.1 Implementando imagens na API
 - [x] 6. Filtro de Querysets
   - [x] 6.1 Filtrando por query string
-- [ ] 7. Habilitando buscas na API
+- [x] 7. Habilitando buscas na API
   - [x] 7.1 Utilizando DjangoFilter backend
   - [x] 7.2 Utilizando o SearchFilter
   - [x] 7.3 Alterando o lookup_field padrão do endpoint
@@ -52,7 +52,7 @@ Desenvolvaimento de um projeto de Web API de pontos turísticos com Python + Dja
   - [x] 10.3 Preparação do projeto parte 2
   - [x] 10.4 Deploy da aplicacao pela primeira vez
   - [x] 10.5 Atualizando a aplicação com novas features
-- [ ] 11. Trabalhando com Nested Relationships
+- [x] 11. Trabalhando com Nested Relationships
   - [x] 11.1 ManyToMany relationships
   - [x] 11.2 Foreignkeys relationships
   - [x] 11.3 Relacionando objetos com objetos existentes via ID
