@@ -6,5 +6,5 @@ djangorestframework==3.10.2
 Pillow==6.1.0
 python-decouple==3.1
 pytz==2019.2
-sqlparse==0.3.0
+sqlparse==0.4.4
 static3==0.7.0
